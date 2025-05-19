@@ -1,0 +1,5 @@
+
+
+> n8n-core@1.93.0 build /Users/mathieudrimonakos/Documents/n8n/packages/core
+> tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json
+

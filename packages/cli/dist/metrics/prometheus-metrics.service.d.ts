@@ -1,0 +1,38 @@
+import { GlobalConfig } from '@n8n/config';
+import { WorkflowRepository } from '@n8n/db';
+import type express from 'express';
+import { InstanceSettings } from 'n8n-core';
+import { MessageEventBus } from '../eventbus/message-event-bus/message-event-bus';
+import { EventService } from '../events/event.service';
+import { CacheService } from '../services/cache/cache.service';
+import type { MetricCategory, MetricLabel } from './types';
+export declare class PrometheusMetricsService {
+    private readonly cacheService;
+    private readonly eventBus;
+    private readonly globalConfig;
+    private readonly eventService;
+    private readonly instanceSettings;
+    private readonly workflowRepository;
+    constructor(cacheService: CacheService, eventBus: MessageEventBus, globalConfig: GlobalConfig, eventService: EventService, instanceSettings: InstanceSettings, workflowRepository: WorkflowRepository);
+    private readonly counters;
+    private readonly gauges;
+    private readonly prefix;
+    private readonly includes;
+    init(app: express.Application): Promise<void>;
+    enableMetric(metric: MetricCategory): void;
+    disableMetric(metric: MetricCategory): void;
+    disableAllMetrics(): void;
+    enableLabels(labels: MetricLabel[]): void;
+    disableAllLabels(): void;
+    private initN8nVersionMetric;
+    private initDefaultMetrics;
+    private initRouteMetrics;
+    private mountMetricsEndpoint;
+    private addPrefixToMetrics;
+    private initCacheMetrics;
+    private toCounter;
+    private initEventBusMetrics;
+    private initQueueMetrics;
+    private initActiveWorkflowCountMetric;
+    private toLabels;
+}

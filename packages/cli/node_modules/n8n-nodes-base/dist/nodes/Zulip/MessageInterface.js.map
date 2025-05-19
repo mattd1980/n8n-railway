@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../nodes/Zulip/MessageInterface.ts"],"sourcesContent":["export interface IMessage {\n\ttype?: string;\n\tto?: string;\n\ttopic?: string;\n\tcontent?: string;\n\tpropagate_mode?: string;\n}\n"],"mappings":";;;;;;;;;;;;;;AAAA;AAAA;","names":[]}

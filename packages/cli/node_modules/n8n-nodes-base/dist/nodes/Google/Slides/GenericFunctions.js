@@ -1,0 +1,68 @@
+"use strict";
+var __defProp = Object.defineProperty;
+var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+var __getOwnPropNames = Object.getOwnPropertyNames;
+var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __export = (target, all) => {
+  for (var name in all)
+    __defProp(target, name, { get: all[name], enumerable: true });
+};
+var __copyProps = (to, from, except, desc) => {
+  if (from && typeof from === "object" || typeof from === "function") {
+    for (let key of __getOwnPropNames(from))
+      if (!__hasOwnProp.call(to, key) && key !== except)
+        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
+  }
+  return to;
+};
+var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
+var GenericFunctions_exports = {};
+__export(GenericFunctions_exports, {
+  googleApiRequest: () => googleApiRequest
+});
+module.exports = __toCommonJS(GenericFunctions_exports);
+var import_n8n_workflow = require("n8n-workflow");
+var import_GenericFunctions = require("../GenericFunctions");
+async function googleApiRequest(method, resource, body = {}, qs = {}) {
+  const authenticationMethod = this.getNodeParameter(
+    "authentication",
+    0,
+    "serviceAccount"
+  );
+  const options = {
+    headers: {
+      "Content-Type": "application/json"
+    },
+    method,
+    body,
+    qs,
+    uri: `https://slides.googleapis.com/v1${resource}`,
+    json: true
+  };
+  if (!Object.keys(body).length) {
+    delete options.body;
+  }
+  if (!Object.keys(qs).length) {
+    delete options.qs;
+  }
+  try {
+    if (authenticationMethod === "serviceAccount") {
+      const credentials = await this.getCredentials("googleApi");
+      const { access_token } = await import_GenericFunctions.getGoogleAccessToken.call(this, credentials, "slides");
+      options.headers.Authorization = `Bearer ${access_token}`;
+      return await this.helpers.request(options);
+    } else {
+      return await this.helpers.requestOAuth2.call(this, "googleSlidesOAuth2Api", options);
+    }
+  } catch (error) {
+    if (error.code === "ERR_OSSL_PEM_NO_START_LINE") {
+      error.statusCode = "401";
+    }
+    throw new import_n8n_workflow.NodeApiError(this.getNode(), error);
+  }
+}
+// Annotate the CommonJS export names for ESM import in node:
+0 && (module.exports = {
+  googleApiRequest
+});
+//# sourceMappingURL=GenericFunctions.js.map

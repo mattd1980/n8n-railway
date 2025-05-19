@@ -1,0 +1,1 @@
+{"version":3,"file":"1681134145997-RemoveSkipOwnerSetup.js","sourceRoot":"","sources":["../../../src/migrations/mysqldb/1681134145997-RemoveSkipOwnerSetup.ts"],"names":[],"mappings":";;;AAEA,MAAa,iCAAiC;IAC7C,KAAK,CAAC,EAAE,CAAC,EAAE,WAAW,EAAE,WAAW,EAAoB;QACtD,MAAM,WAAW,CAAC,KAAK,CACtB,eAAe,WAAW,mEAAmE,CAC7F,CAAC;IACH,CAAC;CACD;AAND,8EAMC"}

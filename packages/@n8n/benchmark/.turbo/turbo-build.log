@@ -1,0 +1,6 @@
+
+[43m[30m WARN [39m[49m Unsupported engine: wanted: {"node":">=20.10"} (current: {"node":"v18.20.8","pnpm":"10.2.1"})
+
+> @n8n/n8n-benchmark@1.16.0 build /Users/mathieudrimonakos/Documents/n8n/packages/@n8n/benchmark
+> tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json
+

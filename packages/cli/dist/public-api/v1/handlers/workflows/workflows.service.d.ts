@@ -1,0 +1,15 @@
+import type { Project, User } from '@n8n/db';
+import { WorkflowEntity, SharedWorkflow } from '@n8n/db';
+import type { Scope, WorkflowSharingRole } from '@n8n/permissions';
+import type { WorkflowId } from 'n8n-workflow';
+export declare function getSharedWorkflowIds(user: User, scopes: Scope[], projectId?: string): Promise<string[]>;
+export declare function getSharedWorkflow(user: User, workflowId?: string | undefined): Promise<SharedWorkflow | null>;
+export declare function getWorkflowById(id: string): Promise<WorkflowEntity | null>;
+export declare function createWorkflow(workflow: WorkflowEntity, user: User, personalProject: Project, role: WorkflowSharingRole): Promise<WorkflowEntity>;
+export declare function setWorkflowAsActive(workflowId: WorkflowId): Promise<void>;
+export declare function setWorkflowAsInactive(workflowId: WorkflowId): Promise<import("@n8n/typeorm").UpdateResult>;
+export declare function deleteWorkflow(workflow: WorkflowEntity): Promise<WorkflowEntity>;
+export declare function updateWorkflow(workflowId: string, updateData: WorkflowEntity): Promise<import("@n8n/typeorm").UpdateResult>;
+export declare function parseTagNames(tags: string): string[];
+export declare function getWorkflowTags(workflowId: string): Promise<import("@n8n/db").TagEntity[]>;
+export declare function updateTags(workflowId: string, newTags: string[]): Promise<void>;

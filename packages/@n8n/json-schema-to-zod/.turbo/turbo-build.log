@@ -1,0 +1,17 @@
+
+
+> @n8n/json-schema-to-zod@1.3.0 build /Users/mathieudrimonakos/Documents/n8n/packages/@n8n/json-schema-to-zod
+> rimraf ./dist && pnpm run build:types && pnpm run build:cjs && pnpm run build:esm
+
+
+> @n8n/json-schema-to-zod@1.3.0 build:types /Users/mathieudrimonakos/Documents/n8n/packages/@n8n/json-schema-to-zod
+> tsc -p tsconfig.types.json
+
+
+> @n8n/json-schema-to-zod@1.3.0 build:cjs /Users/mathieudrimonakos/Documents/n8n/packages/@n8n/json-schema-to-zod
+> tsc -p tsconfig.cjs.json && node postcjs.js
+
+
+> @n8n/json-schema-to-zod@1.3.0 build:esm /Users/mathieudrimonakos/Documents/n8n/packages/@n8n/json-schema-to-zod
+> tsc -p tsconfig.esm.json && node postesm.js
+

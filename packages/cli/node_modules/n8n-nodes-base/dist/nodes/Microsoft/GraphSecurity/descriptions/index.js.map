@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../../nodes/Microsoft/GraphSecurity/descriptions/index.ts"],"sourcesContent":["export * from './SecureScoreDescription';\nexport * from './SecureScoreControlProfileDescription';\n"],"mappings":";;;;;;;;;;;;;;;AAAA;AAAA;AAAA,iCAAc,qCAAd;AACA,iCAAc,mDADd;","names":[]}

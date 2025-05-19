@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../nodes/Google/CloudNaturalLanguage/Interface.ts"],"sourcesContent":["export interface IData {\n\tdocument: IDocument;\n\tencodingType: string;\n}\n\nexport interface IDocument {\n\ttype: string;\n\tlanguage?: string;\n\tcontent?: string;\n\tgcsContentUri?: string;\n}\n"],"mappings":";;;;;;;;;;;;;;AAAA;AAAA;","names":[]}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../nodes/Segment/IdentifyInterface.ts"],"sourcesContent":["import type { IDataObject } from 'n8n-workflow';\n\nexport interface IIdentify {\n\tuserId?: string;\n\tanonymousId?: string;\n\ttraits?: IDataObject;\n\tcontext?: IDataObject;\n\tintegrations?: IDataObject;\n\ttimestamp?: string;\n}\n"],"mappings":";;;;;;;;;;;;;;AAAA;AAAA;","names":[]}

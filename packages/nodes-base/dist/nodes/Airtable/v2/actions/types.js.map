@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../../nodes/Airtable/v2/actions/types.ts"],"sourcesContent":["export type Table = {\n\tid: string;\n\tname: string;\n\tfields: Field[];\n};\n\nexport type TablesResponse = {\n\ttables: Table[];\n};\n\nexport type Field = {\n\tid: string;\n\tname: string;\n\ttype: string;\n};\n"],"mappings":";;;;;;;;;;;;;;AAAA;AAAA;","names":[]}

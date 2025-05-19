@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../nodes/Salesforce/CampaignMemberInterface.ts"],"sourcesContent":["export interface ICampaignMember {\n\tCampaignId?: string;\n\tContactId?: string;\n\tLeadId?: string;\n\tStatus?: string;\n}\n"],"mappings":";;;;;;;;;;;;;;AAAA;AAAA;","names":[]}

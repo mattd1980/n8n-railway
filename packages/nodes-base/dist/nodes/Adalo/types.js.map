@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../nodes/Adalo/types.ts"],"sourcesContent":["export type AdaloCredentials = {\n\tapiKey: string;\n\tappId: string;\n};\n\nexport type FieldsUiValues = Array<{\n\tfieldId: string;\n\tfieldValue: string;\n}>;\n\nexport type Operation = 'create' | 'delete' | 'update' | 'get' | 'getAll';\n"],"mappings":";;;;;;;;;;;;;;AAAA;AAAA;","names":[]}

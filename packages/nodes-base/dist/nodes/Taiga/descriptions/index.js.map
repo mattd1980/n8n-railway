@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../nodes/Taiga/descriptions/index.ts"],"sourcesContent":["export * from './EpicDescription';\nexport * from './IssueDescription';\nexport * from './TaskDescription';\nexport * from './UserStoryDescription';\n"],"mappings":";;;;;;;;;;;;;;;AAAA;AAAA;AAAA,iCAAc,8BAAd;AACA,iCAAc,+BADd;AAEA,iCAAc,8BAFd;AAGA,iCAAc,mCAHd;","names":[]}

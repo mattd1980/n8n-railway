@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../nodes/Kitemaker/descriptions/index.ts"],"sourcesContent":["export * from './OrganizationDescription';\nexport * from './SpaceDescription';\nexport * from './UserDescription';\nexport * from './WorkItemDescription';\n"],"mappings":";;;;;;;;;;;;;;;AAAA;AAAA;AAAA,iCAAc,sCAAd;AACA,iCAAc,+BADd;AAEA,iCAAc,8BAFd;AAGA,iCAAc,kCAHd;","names":[]}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../nodes/Slack/V1/MessageInterface.ts"],"sourcesContent":["export interface IAttachment {\n\tfields: {\n\t\titem?: object[];\n\t};\n}\n"],"mappings":";;;;;;;;;;;;;;AAAA;AAAA;","names":[]}

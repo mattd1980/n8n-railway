@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../../../nodes/Microsoft/Teams/v2/descriptions/index.ts"],"sourcesContent":["export * from './rlc.description';\nexport * from './common.description';\n"],"mappings":";;;;;;;;;;;;;;;AAAA;AAAA;AAAA,iCAAc,8BAAd;AACA,iCAAc,iCADd;","names":[]}

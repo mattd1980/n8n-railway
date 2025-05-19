@@ -1,0 +1,5 @@
+
+
+> @n8n/api-types@0.29.0 build /Users/mathieudrimonakos/Documents/n8n/packages/@n8n/api-types
+> tsc -p tsconfig.build.json
+

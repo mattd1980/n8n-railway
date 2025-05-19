@@ -1,0 +1,36 @@
+import * as z from "zod";
+import { ImageURLChunk, ImageURLChunk$Outbound } from "./imageurlchunk.js";
+import { ReferenceChunk, ReferenceChunk$Outbound } from "./referencechunk.js";
+import { TextChunk, TextChunk$Outbound } from "./textchunk.js";
+export type ContentChunk = (ImageURLChunk & {
+    type: "image_url";
+}) | (TextChunk & {
+    type: "text";
+}) | (ReferenceChunk & {
+    type: "reference";
+});
+/** @internal */
+export declare const ContentChunk$inboundSchema: z.ZodType<ContentChunk, z.ZodTypeDef, unknown>;
+/** @internal */
+export type ContentChunk$Outbound = (ImageURLChunk$Outbound & {
+    type: "image_url";
+}) | (TextChunk$Outbound & {
+    type: "text";
+}) | (ReferenceChunk$Outbound & {
+    type: "reference";
+});
+/** @internal */
+export declare const ContentChunk$outboundSchema: z.ZodType<ContentChunk$Outbound, z.ZodTypeDef, ContentChunk>;
+/**
+ * @internal
+ * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
+ */
+export declare namespace ContentChunk$ {
+    /** @deprecated use `ContentChunk$inboundSchema` instead. */
+    const inboundSchema: z.ZodType<ContentChunk, z.ZodTypeDef, unknown>;
+    /** @deprecated use `ContentChunk$outboundSchema` instead. */
+    const outboundSchema: z.ZodType<ContentChunk$Outbound, z.ZodTypeDef, ContentChunk>;
+    /** @deprecated use `ContentChunk$Outbound` instead. */
+    type Outbound = ContentChunk$Outbound;
+}
+//# sourceMappingURL=contentchunk.d.ts.map

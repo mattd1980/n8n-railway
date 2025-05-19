@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../nodes/MonicaCrm/types.ts"],"sourcesContent":["import type { IDataObject } from 'n8n-workflow';\n\nexport type LoaderGetResponse = {\n\tdata: Array<{\n\t\tid: string;\n\t\tname: string;\n\t}>;\n} & IDataObject;\n\nexport type Option = {\n\tvalue: string;\n\tname: string;\n};\n"],"mappings":";;;;;;;;;;;;;;AAAA;AAAA;","names":[]}

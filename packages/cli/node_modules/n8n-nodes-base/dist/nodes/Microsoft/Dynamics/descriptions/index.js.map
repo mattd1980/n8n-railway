@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../../nodes/Microsoft/Dynamics/descriptions/index.ts"],"sourcesContent":["export * from './AccountDescription';\n"],"mappings":";;;;;;;;;;;;;;;AAAA;AAAA;AAAA,iCAAc,iCAAd;","names":[]}

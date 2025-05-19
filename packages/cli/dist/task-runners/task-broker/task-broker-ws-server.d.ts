@@ -1,0 +1,31 @@
+import { TaskRunnersConfig } from '@n8n/config';
+import type { BrokerMessage } from '@n8n/task-runner';
+import { Logger } from 'n8n-core';
+import type WebSocket from 'ws';
+import { WsStatusCodes } from '../../constants';
+import { DefaultTaskRunnerDisconnectAnalyzer } from '../../task-runners/default-task-runner-disconnect-analyzer';
+import type { DisconnectAnalyzer, DisconnectReason, TaskBrokerServerInitRequest, TaskBrokerServerInitResponse } from '../../task-runners/task-broker/task-broker-types';
+import { TaskRunnerLifecycleEvents } from '../../task-runners/task-runner-lifecycle-events';
+import { TaskBroker, type TaskRunner } from './task-broker.service';
+type WsStatusCode = (typeof WsStatusCodes)[keyof typeof WsStatusCodes];
+export declare class TaskBrokerWsServer {
+    private readonly logger;
+    private readonly taskBroker;
+    private disconnectAnalyzer;
+    private readonly taskTunnersConfig;
+    private readonly runnerLifecycleEvents;
+    runnerConnections: Map<TaskRunner['id'], WebSocket>;
+    private heartbeatTimer;
+    constructor(logger: Logger, taskBroker: TaskBroker, disconnectAnalyzer: DefaultTaskRunnerDisconnectAnalyzer, taskTunnersConfig: TaskRunnersConfig, runnerLifecycleEvents: TaskRunnerLifecycleEvents);
+    start(): void;
+    private startHeartbeatChecks;
+    stop(): Promise<void>;
+    setDisconnectAnalyzer(disconnectAnalyzer: DisconnectAnalyzer): void;
+    getDisconnectAnalyzer(): DefaultTaskRunnerDisconnectAnalyzer;
+    sendMessage(id: TaskRunner['id'], message: BrokerMessage.ToRunner.All): void;
+    add(id: TaskRunner['id'], connection: WebSocket): void;
+    removeConnection(id: TaskRunner['id'], reason?: DisconnectReason, code?: WsStatusCode): Promise<void>;
+    handleRequest(req: TaskBrokerServerInitRequest, _res: TaskBrokerServerInitResponse): void;
+    private stopConnectedRunners;
+}
+export {};

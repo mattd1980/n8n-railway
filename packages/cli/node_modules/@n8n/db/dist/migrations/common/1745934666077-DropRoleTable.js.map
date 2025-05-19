@@ -1,0 +1,1 @@
+{"version":3,"file":"1745934666077-DropRoleTable.js","sourceRoot":"","sources":["../../../src/migrations/common/1745934666077-DropRoleTable.ts"],"names":[],"mappings":";;;AAQA,MAAa,0BAA0B;IACtC,KAAK,CAAC,EAAE,CAAC,EAAE,aAAa,EAAE,EAAE,SAAS,EAAE,EAAoB;QAC1D,MAAM,SAAS,CAAC,MAAM,CAAC,CAAC;IACzB,CAAC;CACD;AAJD,gEAIC"}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../nodes/Affinity/OrganizationInterface.ts"],"sourcesContent":["export interface IOrganization {\n\tname?: string;\n\tdomain?: string;\n\tperson_ids?: number[];\n}\n"],"mappings":";;;;;;;;;;;;;;AAAA;AAAA;","names":[]}

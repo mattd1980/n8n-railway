@@ -1,0 +1,1 @@
+{"version":3,"file":"create-project.dto.js","sourceRoot":"","sources":["../../../src/dto/project/create-project.dto.ts"],"names":[],"mappings":";;;AAAA,yCAA8B;AAE9B,iEAAoF;AAEpF,MAAa,gBAAiB,SAAQ,aAAC,CAAC,KAAK,CAAC;IAC7C,IAAI,EAAE,kCAAiB;IACvB,IAAI,EAAE,kCAAiB,CAAC,QAAQ,EAAE;CAClC,CAAC;CAAG;AAHL,4CAGK"}

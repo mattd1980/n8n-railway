@@ -1,0 +1,5 @@
+
+
+> @n8n/integration-test-utils@0.2.0 build /Users/mathieudrimonakos/Documents/n8n/packages/@n8n/integration-test-utils
+> tsc -p tsconfig.build.json
+

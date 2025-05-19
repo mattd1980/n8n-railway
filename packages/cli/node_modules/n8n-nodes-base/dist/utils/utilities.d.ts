@@ -1,0 +1,50 @@
+import * as n8n_workflow from 'n8n-workflow';
+import { IDataObject, IDisplayOptions, INodeProperties, INodeExecutionData, IPairedItemData } from 'n8n-workflow';
+
+declare function chunk<T>(array: T[], size?: number): T[][];
+declare const shuffleArray: <T>(array: T[]) => void;
+declare const flattenKeys: (obj: IDataObject, prefix?: string[]) => IDataObject;
+declare function flatten<T>(nestedArray: T[][]): any;
+declare const compareItems: <T extends {
+    json: Record<string, unknown>;
+}>(obj1: T, obj2: T, keys: string[], disableDotNotation?: boolean) => boolean;
+declare function updateDisplayOptions(displayOptions: IDisplayOptions, properties: INodeProperties[]): {
+    displayOptions: IDisplayOptions;
+    displayName: string;
+    name: string;
+    type: n8n_workflow.NodePropertyTypes;
+    typeOptions?: n8n_workflow.INodePropertyTypeOptions;
+    default: n8n_workflow.NodeParameterValueType;
+    description?: string;
+    hint?: string;
+    disabledOptions?: IDisplayOptions;
+    options?: Array<n8n_workflow.INodePropertyOptions | INodeProperties | n8n_workflow.INodePropertyCollection>;
+    placeholder?: string;
+    isNodeSetting?: boolean;
+    noDataExpression?: boolean;
+    required?: boolean;
+    routing?: n8n_workflow.INodePropertyRouting;
+    credentialTypes?: Array<"extends:oAuth2Api" | "extends:oAuth1Api" | "has:authenticate" | "has:genericAuth">;
+    extractValue?: n8n_workflow.INodePropertyValueExtractor;
+    modes?: n8n_workflow.INodePropertyMode[];
+    requiresDataPath?: "single" | "multiple";
+    doNotInherit?: boolean;
+    validateType?: n8n_workflow.FieldType;
+    ignoreValidationDuringExecution?: boolean;
+}[];
+declare function processJsonInput<T>(jsonData: T, inputName?: string): unknown;
+declare const fuzzyCompare: (useFuzzyCompare: boolean, compareVersion?: number) => <T, U>(item1: T, item2: U) => boolean;
+declare function wrapData(data: IDataObject | IDataObject[]): INodeExecutionData[];
+declare const keysToLowercase: <T>(headers: T) => IDataObject | T;
+declare function formatPrivateKey(privateKey: string, keyIsPublic?: boolean): string;
+declare function getResolvables(expression: string): string[];
+declare function flattenObject(data: IDataObject): IDataObject;
+declare function capitalize(str: string): string;
+declare function generatePairedItemData(length: number): IPairedItemData[];
+declare function preparePairedItemDataArray(pairedItem: number | IPairedItemData | IPairedItemData[] | undefined): IPairedItemData[];
+declare const sanitizeDataPathKey: (item: IDataObject, key: string) => string;
+declare function escapeHtml(text: string): string;
+declare function sortItemKeysByPriorityList(data: INodeExecutionData[], priorityList: string[]): INodeExecutionData[];
+declare function createUtmCampaignLink(nodeType: string, instanceId?: string): string;
+
+export { capitalize, chunk, compareItems, createUtmCampaignLink, escapeHtml, flatten, flattenKeys, flattenObject, formatPrivateKey, fuzzyCompare, generatePairedItemData, getResolvables, keysToLowercase, preparePairedItemDataArray, processJsonInput, sanitizeDataPathKey, shuffleArray, sortItemKeysByPriorityList, updateDisplayOptions, wrapData };

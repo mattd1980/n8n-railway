@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../nodes/WooCommerce/descriptions/index.ts"],"sourcesContent":["export * from './CustomerDescription';\n"],"mappings":";;;;;;;;;;;;;;;AAAA;AAAA;AAAA,iCAAc,kCAAd;","names":[]}

@@ -1,0 +1,1 @@
+{"version":3,"file":"is-string-array.js","sourceRoot":"","sources":["../../src/utils/is-string-array.ts"],"names":[],"mappings":";;AAAA,sCAEC;AAFD,SAAgB,aAAa,CAAC,KAAc;IAC3C,OAAO,KAAK,CAAC,OAAO,CAAC,KAAK,CAAC,IAAI,KAAK,CAAC,KAAK,CAAC,CAAC,IAAI,EAAE,EAAE,CAAC,OAAO,IAAI,KAAK,QAAQ,CAAC,CAAC;AAChF,CAAC"}

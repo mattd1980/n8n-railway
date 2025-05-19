@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../../nodes/Webflow/V2/actions/node.type.ts"],"sourcesContent":["import type { AllEntities } from 'n8n-workflow';\n\ntype NodeMap = {\n\titem: 'create' | 'deleteItem' | 'get' | 'getAll' | 'update';\n};\n\nexport type WebflowType = AllEntities<NodeMap>;\n"],"mappings":";;;;;;;;;;;;;;AAAA;AAAA;","names":[]}

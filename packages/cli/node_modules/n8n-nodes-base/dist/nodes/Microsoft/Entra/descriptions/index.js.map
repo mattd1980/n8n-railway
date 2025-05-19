@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../../nodes/Microsoft/Entra/descriptions/index.ts"],"sourcesContent":["export * from './GroupDescription';\nexport * from './UserDescription';\n"],"mappings":";;;;;;;;;;;;;;;AAAA;AAAA;AAAA,iCAAc,+BAAd;AACA,iCAAc,8BADd;","names":[]}

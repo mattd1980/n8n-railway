@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../nodes/Postgres/PostgresInterface.ts"],"sourcesContent":["export interface IPostgresTrigger {\n\ttriggerName: string;\n\tfunctionName: string;\n\tchannelName: string;\n\ttarget: string;\n}\n"],"mappings":";;;;;;;;;;;;;;AAAA;AAAA;","names":[]}

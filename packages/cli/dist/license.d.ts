@@ -1,0 +1,78 @@
+import type { LicenseProvider } from '@n8n/backend-common';
+import { GlobalConfig } from '@n8n/config';
+import { type BooleanLicenseFeature, type NumericLicenseFeature } from '@n8n/constants';
+import { SettingsRepository } from '@n8n/db';
+import type { TEntitlement, TFeatures, TLicenseBlock } from '@n8n_io/license-sdk';
+import { InstanceSettings, Logger } from 'n8n-core';
+import { LicenseMetricsService } from './metrics/license-metrics.service';
+export type FeatureReturnType = Partial<{
+    planName: string;
+} & {
+    [K in NumericLicenseFeature]: number;
+} & {
+    [K in BooleanLicenseFeature]: boolean;
+}>;
+export declare class License implements LicenseProvider {
+    private readonly logger;
+    private readonly instanceSettings;
+    private readonly settingsRepository;
+    private readonly licenseMetricsService;
+    private readonly globalConfig;
+    private manager;
+    private isShuttingDown;
+    constructor(logger: Logger, instanceSettings: InstanceSettings, settingsRepository: SettingsRepository, licenseMetricsService: LicenseMetricsService, globalConfig: GlobalConfig);
+    init({ forceRecreate, isCli, }?: {
+        forceRecreate?: boolean;
+        isCli?: boolean;
+    }): Promise<void>;
+    loadCertStr(): Promise<TLicenseBlock>;
+    onFeatureChange(_features: TFeatures): Promise<void>;
+    saveCertStr(value: TLicenseBlock): Promise<void>;
+    activate(activationKey: string): Promise<void>;
+    reload(): Promise<void>;
+    renew(): Promise<void>;
+    clear(): Promise<void>;
+    shutdown(): Promise<void>;
+    isLicensed(feature: BooleanLicenseFeature): boolean;
+    isSharingEnabled(): boolean;
+    isLogStreamingEnabled(): boolean;
+    isLdapEnabled(): boolean;
+    isSamlEnabled(): boolean;
+    isApiKeyScopesEnabled(): boolean;
+    isAiAssistantEnabled(): boolean;
+    isAskAiEnabled(): boolean;
+    isAiCreditsEnabled(): boolean;
+    isAdvancedExecutionFiltersEnabled(): boolean;
+    isAdvancedPermissionsLicensed(): boolean;
+    isDebugInEditorLicensed(): boolean;
+    isBinaryDataS3Licensed(): boolean;
+    isMultiMainLicensed(): boolean;
+    isVariablesEnabled(): boolean;
+    isSourceControlLicensed(): boolean;
+    isExternalSecretsEnabled(): boolean;
+    isWorkflowHistoryLicensed(): boolean;
+    isAPIDisabled(): boolean;
+    isWorkerViewLicensed(): boolean;
+    isProjectRoleAdminLicensed(): boolean;
+    isProjectRoleEditorLicensed(): boolean;
+    isProjectRoleViewerLicensed(): boolean;
+    isCustomNpmRegistryEnabled(): boolean;
+    isFoldersEnabled(): boolean;
+    getCurrentEntitlements(): TEntitlement[];
+    getValue<T extends keyof FeatureReturnType>(feature: T): FeatureReturnType[T];
+    getManagementJwt(): string;
+    getMainPlan(): TEntitlement | undefined;
+    getConsumerId(): string;
+    getUsersLimit(): number;
+    getTriggerLimit(): number;
+    getVariablesLimit(): number;
+    getAiCredits(): number;
+    getWorkflowHistoryPruneLimit(): number;
+    getTeamProjectLimit(): number;
+    getPlanName(): string;
+    getInfo(): string;
+    isWithinUsersLimit(): boolean;
+    private checkIsLicensedForMultiMain;
+    enableAutoRenewals(): void;
+    disableAutoRenewals(): void;
+}

@@ -1,0 +1,36 @@
+{
+  "name": "cypress-otp",
+  "version": "1.0.3",
+  "description": "Encode a Cypress fixture with Protocol Buffers",
+  "main": "src/index.js",
+  "repository": "https://github.com/NoriSte/cypress-otp.git",
+  "author": "NoriSte <nori.ste.magni@gmail.com>",
+  "keywords": [
+    "cypress",
+    "cypress plugin",
+    "otp",
+    "2fa",
+    "mfa"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^4.0.0",
+    "cypress-wait-until": "1.6.1",
+    "cz-conventional-changelog": "3.1.0",
+    "start-server-and-test": "1.10.10"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "scripts": {
+    "commit": "npx git-cz",
+    "cy:open": "cypress open",
+    "test": "npm run cy:run",
+    "cy:run": "cypress run"
+  },
+  "dependencies": {
+    "otplib": "12.0.1"
+  }
+}

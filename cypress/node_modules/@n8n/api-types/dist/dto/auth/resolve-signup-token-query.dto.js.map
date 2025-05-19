@@ -1,0 +1,1 @@
+{"version":3,"file":"resolve-signup-token-query.dto.js","sourceRoot":"","sources":["../../../src/dto/auth/resolve-signup-token-query.dto.ts"],"names":[],"mappings":";;;AAAA,6BAAwB;AACxB,yCAA8B;AAE9B,MAAa,0BAA2B,SAAQ,aAAC,CAAC,KAAK,CAAC;IACvD,SAAS,EAAE,OAAC,CAAC,MAAM,EAAE,CAAC,IAAI,EAAE;IAC5B,SAAS,EAAE,OAAC,CAAC,MAAM,EAAE,CAAC,IAAI,EAAE;CAC5B,CAAC;CAAG;AAHL,gEAGK"}

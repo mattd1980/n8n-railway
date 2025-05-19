@@ -1,0 +1,1 @@
+{"version":3,"file":"error-like.js","sourceRoot":"","sources":["../../../src/js-task-runner/errors/error-like.ts"],"names":[],"mappings":";;AAKA,kCAMC;AAND,SAAgB,WAAW,CAAC,KAAc;IACzC,IAAI,OAAO,KAAK,KAAK,QAAQ,IAAI,KAAK,KAAK,IAAI;QAAE,OAAO,KAAK,CAAC;IAE9D,MAAM,SAAS,GAAG,KAAkB,CAAC;IAErC,OAAO,OAAO,SAAS,CAAC,OAAO,KAAK,QAAQ,CAAC;AAC9C,CAAC"}

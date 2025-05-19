@@ -1,0 +1,1 @@
+{"version":3,"file":"role-change-request.dto.js","sourceRoot":"","sources":["../../../src/dto/user/role-change-request.dto.ts"],"names":[],"mappings":";;;AAAA,6BAAwB;AACxB,yCAA8B;AAE9B,MAAa,oBAAqB,SAAQ,aAAC,CAAC,KAAK,CAAC;IACjD,WAAW,EAAE,OAAC,CAAC,IAAI,CAAC,CAAC,cAAc,EAAE,eAAe,CAAC,EAAE;QACtD,cAAc,EAAE,sBAAsB;KACtC,CAAC;CACF,CAAC;CAAG;AAJL,oDAIK"}

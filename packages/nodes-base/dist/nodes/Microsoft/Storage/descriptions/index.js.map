@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../../nodes/Microsoft/Storage/descriptions/index.ts"],"sourcesContent":["export * from './BlobDescription';\nexport * from './ContainerDescription';\n"],"mappings":";;;;;;;;;;;;;;;AAAA;AAAA;AAAA,iCAAc,8BAAd;AACA,iCAAc,mCADd;","names":[]}

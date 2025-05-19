@@ -1,0 +1,5 @@
+
+
+> @n8n/codemirror-lang@0.3.0 build /Users/mathieudrimonakos/Documents/n8n/packages/@n8n/codemirror-lang
+> tsc -p tsconfig.build.json
+

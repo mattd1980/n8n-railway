@@ -1,0 +1,1 @@
+{"version":3,"file":"1742918400000-AddScopesColumnToApiKeys.js","sourceRoot":"","sources":["../../../src/migrations/sqlite/1742918400000-AddScopesColumnToApiKeys.ts"],"names":[],"mappings":";;;AAAA,8GAA0H;AAE1H,MAAa,qCAAsC,SAAQ,+EAAa;IAAxE;;QACC,gBAAW,GAAG,KAAc,CAAC;IAC9B,CAAC;CAAA;AAFD,sFAEC"}

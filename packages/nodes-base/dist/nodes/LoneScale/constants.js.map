@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../nodes/LoneScale/constants.ts"],"sourcesContent":["export const BASE_URL = 'https://public-api.lonescale.com';\n"],"mappings":";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAO,MAAM,WAAW;","names":[]}

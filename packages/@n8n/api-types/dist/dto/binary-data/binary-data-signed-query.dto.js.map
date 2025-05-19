@@ -1,0 +1,1 @@
+{"version":3,"file":"binary-data-signed-query.dto.js","sourceRoot":"","sources":["../../../src/dto/binary-data/binary-data-signed-query.dto.ts"],"names":[],"mappings":";;;AAAA,6BAAwB;AACxB,yCAA8B;AAE9B,MAAa,wBAAyB,SAAQ,aAAC,CAAC,KAAK,CAAC;IACrD,KAAK,EAAE,OAAC,CAAC,MAAM,EAAE,CAAC,KAAK,CAAC,kDAAkD,EAAE;QAC3E,OAAO,EAAE,kCAAkC;KAC3C,CAAC;CACF,CAAC;CAAG;AAJL,4DAIK"}

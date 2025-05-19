@@ -1,0 +1,1 @@
+{"version":3,"file":"1738709609940-CreateFolderTable.js","sourceRoot":"","sources":["../../../src/migrations/sqlite/1738709609940-CreateFolderTable.ts"],"names":[],"mappings":";;;AAAA,gGAA4G;AAE5G,MAAa,8BAA+B,SAAQ,iEAAa;IAAjE;;QACC,gBAAW,GAAG,KAAc,CAAC;IAC9B,CAAC;CAAA;AAFD,wEAEC"}

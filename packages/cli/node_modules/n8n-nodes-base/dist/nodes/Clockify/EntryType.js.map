@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../nodes/Clockify/EntryType.ts"],"sourcesContent":["export const EntryTypes = {\n\tNEW_TIME_ENTRY: 0,\n} as const;\n\nexport type EntryType = (typeof EntryTypes)[keyof typeof EntryTypes];\n"],"mappings":";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAO,MAAM,aAAa;AAAA,EACzB,gBAAgB;AACjB;","names":[]}

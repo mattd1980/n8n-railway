@@ -1,0 +1,5 @@
+
+
+> n8n-workflow@1.92.0 build /Users/mathieudrimonakos/Documents/n8n/packages/workflow
+> tsc -p tsconfig.build.json
+

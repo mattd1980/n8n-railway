@@ -1,0 +1,15 @@
+import { LLMTool } from "../types/llm";
+import { ChatMessage } from "./llm/LLMClient";
+export declare function buildVerifyActCompletionSystemPrompt(): ChatMessage;
+export declare function buildVerifyActCompletionUserPrompt(goal: string, steps: string, domElements: string | undefined): ChatMessage;
+export declare function buildActSystemPrompt(): ChatMessage;
+export declare function buildActUserPrompt(action: string, steps: string, domElements: string, variables?: Record<string, string>): ChatMessage;
+export declare const actTools: LLMTool[];
+export declare function buildExtractSystemPrompt(isUsingPrintExtractedDataTool?: boolean, useTextExtract?: boolean): ChatMessage;
+export declare function buildExtractUserPrompt(instruction: string, domElements: string, isUsingPrintExtractedDataTool?: boolean): ChatMessage;
+export declare function buildRefineSystemPrompt(): ChatMessage;
+export declare function buildRefineUserPrompt(instruction: string, previouslyExtractedContent: object, newlyExtractedContent: object): ChatMessage;
+export declare function buildMetadataSystemPrompt(): ChatMessage;
+export declare function buildMetadataPrompt(instruction: string, extractionResponse: object, chunksSeen: number, chunksTotal: number): ChatMessage;
+export declare function buildObserveSystemPrompt(): ChatMessage;
+export declare function buildObserveUserMessage(instruction: string, domElements: string): ChatMessage;

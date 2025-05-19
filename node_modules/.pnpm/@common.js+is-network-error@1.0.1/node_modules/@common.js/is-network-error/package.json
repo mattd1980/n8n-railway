@@ -1,0 +1,29 @@
+{
+  "name": "@common.js/is-network-error",
+  "version": "1.0.1",
+  "description": "is-network-error package exported as CommonJS modules",
+  "license": "MIT",
+  "repository": "etienne-martin/common.js",
+  "funding": "https://github.com/sponsors/sindresorhus",
+  "type": "commonjs",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "test": "xo && ava && tsd"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "devDependencies": {
+    "ava": "^5.3.1",
+    "tsd": "^0.29.0",
+    "xo": "^0.56.0"
+  },
+  "homepage": "https://github.com/etienne-martin/common.js#readme",
+  "dependencies": {},
+  "types": "./index.d.ts",
+  "main": "./index.js"
+}

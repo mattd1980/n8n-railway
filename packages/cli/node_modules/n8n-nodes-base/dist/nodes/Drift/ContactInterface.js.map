@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../nodes/Drift/ContactInterface.ts"],"sourcesContent":["export interface IContact {\n\temail?: string;\n\tname?: string;\n\tphone?: string;\n\ttags?: string[];\n}\n"],"mappings":";;;;;;;;;;;;;;AAAA;AAAA;","names":[]}

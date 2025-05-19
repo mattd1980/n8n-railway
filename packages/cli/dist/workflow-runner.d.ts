@@ -1,0 +1,31 @@
+import { ExecutionRepository } from '@n8n/db';
+import type { ExecutionLifecycleHooks } from 'n8n-core';
+import { ErrorReporter, InstanceSettings, Logger } from 'n8n-core';
+import type { ExecutionError, IDeferredPromise, IExecuteResponsePromiseData, WorkflowExecuteMode, IWorkflowExecutionDataProcess } from 'n8n-workflow';
+import { ActiveExecutions } from './active-executions';
+import { ExecutionNotFoundError } from './errors/execution-not-found-error';
+import { ExecutionDataService } from './executions/execution-data.service';
+import { CredentialsPermissionChecker } from './executions/pre-execution-checks';
+import { ManualExecutionService } from './manual-execution.service';
+import { NodeTypes } from './node-types';
+import { WorkflowStaticDataService } from './workflows/workflow-static-data.service';
+export declare class WorkflowRunner {
+    private readonly logger;
+    private readonly errorReporter;
+    private readonly activeExecutions;
+    private readonly executionRepository;
+    private readonly workflowStaticDataService;
+    private readonly nodeTypes;
+    private readonly credentialsPermissionChecker;
+    private readonly instanceSettings;
+    private readonly manualExecutionService;
+    private readonly executionDataService;
+    private scalingService;
+    private executionsMode;
+    constructor(logger: Logger, errorReporter: ErrorReporter, activeExecutions: ActiveExecutions, executionRepository: ExecutionRepository, workflowStaticDataService: WorkflowStaticDataService, nodeTypes: NodeTypes, credentialsPermissionChecker: CredentialsPermissionChecker, instanceSettings: InstanceSettings, manualExecutionService: ManualExecutionService, executionDataService: ExecutionDataService);
+    setExecutionMode(mode: 'regular' | 'queue'): void;
+    processError(error: ExecutionError | ExecutionNotFoundError, startedAt: Date, executionMode: WorkflowExecuteMode, executionId: string, hooks?: ExecutionLifecycleHooks): Promise<void>;
+    run(data: IWorkflowExecutionDataProcess, loadStaticData?: boolean, realtime?: boolean, restartExecutionId?: string, responsePromise?: IDeferredPromise<IExecuteResponsePromiseData>): Promise<string>;
+    private runMainProcess;
+    private enqueueExecution;
+}

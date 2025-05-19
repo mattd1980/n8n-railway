@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../../nodes/Merge/v3/actions/node.type.ts"],"sourcesContent":["export type MergeType =\n\t| 'append'\n\t| 'combineByFields'\n\t| 'combineBySql'\n\t| 'combineByPosition'\n\t| 'combineAll'\n\t| 'chooseBranch';\n"],"mappings":";;;;;;;;;;;;;;AAAA;AAAA;","names":[]}

@@ -1,0 +1,62 @@
+import { SettingsRepository } from '@n8n/db';
+import { Cipher, Logger } from 'n8n-core';
+import { type IDataObject } from 'n8n-workflow';
+import { EventService } from '../events/event.service';
+import { License } from '../license';
+import { Publisher } from '../scaling/pubsub/publisher.service';
+import { ExternalSecretsProviders } from './external-secrets-providers.ee';
+import { ExternalSecretsConfig } from './external-secrets.config';
+import type { ExternalSecretsSettings, SecretsProvider, SecretsProviderSettings } from './types';
+export declare class ExternalSecretsManager {
+    private readonly logger;
+    private readonly config;
+    private readonly settingsRepo;
+    private readonly license;
+    private readonly secretsProviders;
+    private readonly cipher;
+    private readonly eventService;
+    private readonly publisher;
+    private providers;
+    private initializingPromise?;
+    private cachedSettings;
+    initialized: boolean;
+    updateInterval: NodeJS.Timer;
+    initRetryTimeouts: Record<string, NodeJS.Timer>;
+    constructor(logger: Logger, config: ExternalSecretsConfig, settingsRepo: SettingsRepository, license: License, secretsProviders: ExternalSecretsProviders, cipher: Cipher, eventService: EventService, publisher: Publisher);
+    init(): Promise<void>;
+    shutdown(): void;
+    reloadAllProviders(backoff?: number): Promise<void>;
+    private broadcastReloadExternalSecretsProviders;
+    getDecryptedSettings(): Promise<ExternalSecretsSettings | null>;
+    private internalInit;
+    private initProvider;
+    private retryInitWithBackoff;
+    updateSecrets(): Promise<void>;
+    getProvider(provider: string): SecretsProvider | undefined;
+    hasProvider(provider: string): boolean;
+    getProviderNames(): string[] | undefined;
+    getSecret(provider: string, name: string): unknown;
+    hasSecret(provider: string, name: string): boolean;
+    getSecretNames(provider: string): string[] | undefined;
+    getAllSecretNames(): Record<string, string[]>;
+    getProvidersWithSettings(): Array<{
+        provider: SecretsProvider;
+        settings: SecretsProviderSettings;
+    }>;
+    getProviderWithSettings(provider: string): {
+        provider: SecretsProvider;
+        settings: SecretsProviderSettings;
+    };
+    reloadProvider(provider: string, backoff?: number): Promise<void>;
+    setProviderSettings(provider: string, data: IDataObject, userId?: string): Promise<void>;
+    setProviderConnected(provider: string, connected: boolean): Promise<void>;
+    private trackProviderSave;
+    private encryptSecretsSettings;
+    saveAndSetSettings(settings: ExternalSecretsSettings): Promise<void>;
+    testProviderSettings(provider: string, data: IDataObject): Promise<{
+        success: boolean;
+        testState: 'connected' | 'tested' | 'error';
+        error?: string;
+    }>;
+    updateProvider(provider: string): Promise<boolean>;
+}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../nodes/Keap/ContactNoteInterface.ts"],"sourcesContent":["export interface INote {\n\tbody?: string;\n\tcontact_id?: number;\n\ttitle?: string;\n\ttype?: string;\n\tuser_id?: number;\n}\n"],"mappings":";;;;;;;;;;;;;;AAAA;AAAA;","names":[]}

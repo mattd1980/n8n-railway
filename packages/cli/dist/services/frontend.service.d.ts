@@ -1,0 +1,38 @@
+import type { FrontendSettings } from '@n8n/api-types';
+import { LicenseState } from '@n8n/backend-common';
+import { GlobalConfig, SecurityConfig } from '@n8n/config';
+import { BinaryDataConfig, InstanceSettings, Logger } from 'n8n-core';
+import { CredentialTypes } from '../credential-types';
+import { CredentialsOverwrites } from '../credentials-overwrites';
+import { License } from '../license';
+import { LoadNodesAndCredentials } from '../load-nodes-and-credentials';
+import { InsightsService } from '../modules/insights/insights.service';
+import { ModulesConfig } from '../modules/modules.config';
+import { PushConfig } from '../push/push.config';
+import { UserManagementMailer } from '../user-management/email';
+import { UrlService } from './url.service';
+export declare class FrontendService {
+    private readonly globalConfig;
+    private readonly logger;
+    private readonly loadNodesAndCredentials;
+    private readonly credentialTypes;
+    private readonly credentialsOverwrites;
+    private readonly license;
+    private readonly mailer;
+    private readonly instanceSettings;
+    private readonly urlService;
+    private readonly securityConfig;
+    private readonly modulesConfig;
+    private readonly pushConfig;
+    private readonly binaryDataConfig;
+    private readonly insightsService;
+    private readonly licenseState;
+    settings: FrontendSettings;
+    private communityPackagesService?;
+    constructor(globalConfig: GlobalConfig, logger: Logger, loadNodesAndCredentials: LoadNodesAndCredentials, credentialTypes: CredentialTypes, credentialsOverwrites: CredentialsOverwrites, license: License, mailer: UserManagementMailer, instanceSettings: InstanceSettings, urlService: UrlService, securityConfig: SecurityConfig, modulesConfig: ModulesConfig, pushConfig: PushConfig, binaryDataConfig: BinaryDataConfig, insightsService: InsightsService, licenseState: LicenseState);
+    private initSettings;
+    generateTypes(): Promise<void>;
+    getSettings(): FrontendSettings;
+    private writeStaticJSON;
+    private overwriteCredentialsProperties;
+}

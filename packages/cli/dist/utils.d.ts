@@ -1,0 +1,11 @@
+import type { INode, INodeType } from 'n8n-workflow';
+export declare function isWorkflowIdValid(id: string | null | undefined): boolean;
+export declare const findSubworkflowStart: (nodes: INode[]) => INode;
+export declare const findCliWorkflowStart: (nodes: INode[]) => INode;
+export declare const toError: (maybeError: unknown) => Error;
+export declare const isIntegerString: (value: string) => boolean;
+export declare function removeTrailingSlash(path: string): string;
+export declare function rightDiff<T1, T2>([arr1, keyExtractor1]: [T1[], (item: T1) => string], [arr2, keyExtractor2]: [T2[], (item: T2) => string]): T2[];
+export declare const assertNever: (_value: never) => void;
+export declare const isPositiveInteger: (maybeInt: string) => boolean;
+export declare const shouldAssignExecuteMethod: (nodeType: INodeType) => boolean;

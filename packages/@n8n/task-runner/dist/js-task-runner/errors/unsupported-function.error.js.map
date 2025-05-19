@@ -1,0 +1,1 @@
+{"version":3,"file":"unsupported-function.error.js","sourceRoot":"","sources":["../../../src/js-task-runner/errors/unsupported-function.error.ts"],"names":[],"mappings":";;;AAAA,+CAAgD;AAMhD,MAAa,wBAAyB,SAAQ,+BAAgB;IAC7D,YAAY,YAAoB;QAC/B,KAAK,CAAC,iBAAiB,YAAY,qCAAqC,EAAE;YACzE,KAAK,EAAE,MAAM;SACb,CAAC,CAAC;IACJ,CAAC;CACD;AAND,4DAMC"}

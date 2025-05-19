@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../nodes/HttpRequest/interfaces.ts"],"sourcesContent":["export type HttpSslAuthCredentials = {\n\tca?: string;\n\tcert?: string;\n\tkey?: string;\n\tpassphrase?: string;\n};\n"],"mappings":";;;;;;;;;;;;;;AAAA;AAAA;","names":[]}

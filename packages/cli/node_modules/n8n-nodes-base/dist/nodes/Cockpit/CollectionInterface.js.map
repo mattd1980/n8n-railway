@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../nodes/Cockpit/CollectionInterface.ts"],"sourcesContent":["export interface ICollection {\n\tfields?: object;\n\tfilter?: object;\n\tlimit?: number;\n\tskip?: number;\n\tsort?: object;\n\tpopulate?: boolean;\n\tsimple?: boolean;\n\tlang?: string;\n\tdata?: object;\n}\n"],"mappings":";;;;;;;;;;;;;;AAAA;AAAA;","names":[]}

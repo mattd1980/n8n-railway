@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../nodes/Affinity/PersonInterface.ts"],"sourcesContent":["export interface IPerson {\n\tfirst_name?: string;\n\tlast_name?: string;\n\temails?: string[];\n\torganization_ids?: number[];\n}\n"],"mappings":";;;;;;;;;;;;;;AAAA;AAAA;","names":[]}

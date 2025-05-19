@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../nodes/Salesforce/UserInterface.ts"],"sourcesContent":["export interface IUser {\n\tAlias?: string;\n\tDepartment?: string;\n\tDivision?: string;\n\tEmail?: string;\n\tIsActive?: boolean;\n\tMobilePhone?: string;\n\tTitle?: string;\n\tUsername?: string;\n}\n"],"mappings":";;;;;;;;;;;;;;AAAA;AAAA;","names":[]}

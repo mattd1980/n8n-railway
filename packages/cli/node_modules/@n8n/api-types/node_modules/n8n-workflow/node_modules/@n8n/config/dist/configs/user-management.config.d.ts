@@ -1,0 +1,32 @@
+import { z } from 'zod';
+declare class SmtpAuth {
+    user: string;
+    pass: string;
+    serviceClient: string;
+    privateKey: string;
+}
+declare class SmtpConfig {
+    host: string;
+    port: number;
+    secure: boolean;
+    startTLS: boolean;
+    sender: string;
+    auth: SmtpAuth;
+}
+export declare class TemplateConfig {
+    'user-invited': string;
+    'password-reset-requested': string;
+    'workflow-shared': string;
+    'credentials-shared': string;
+}
+declare const emailModeSchema: z.ZodEnum<["", "smtp"]>;
+type EmailMode = z.infer<typeof emailModeSchema>;
+declare class EmailConfig {
+    mode: EmailMode;
+    smtp: SmtpConfig;
+    template: TemplateConfig;
+}
+export declare class UserManagementConfig {
+    emails: EmailConfig;
+}
+export {};

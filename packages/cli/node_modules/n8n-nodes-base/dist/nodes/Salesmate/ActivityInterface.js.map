@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../nodes/Salesmate/ActivityInterface.ts"],"sourcesContent":["export interface IActivity {\n\ttitle?: string;\n\towner?: number;\n\ttype?: string;\n\tdescription?: string;\n\ttags?: string;\n\tdueDate?: number;\n\tduration?: number;\n\tisCalendarInvite?: boolean;\n\tisCompleted?: boolean;\n}\n"],"mappings":";;;;;;;;;;;;;;AAAA;AAAA;","names":[]}

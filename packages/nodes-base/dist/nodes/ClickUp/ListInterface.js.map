@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../nodes/ClickUp/ListInterface.ts"],"sourcesContent":["export interface IList {\n\tname?: string;\n\tcontent?: string;\n\tassignee?: number;\n\tstatus?: string;\n\tpriority?: number;\n\tdue_date?: number;\n\tdue_date_time?: boolean;\n\tunset_status?: boolean;\n}\n"],"mappings":";;;;;;;;;;;;;;AAAA;AAAA;","names":[]}

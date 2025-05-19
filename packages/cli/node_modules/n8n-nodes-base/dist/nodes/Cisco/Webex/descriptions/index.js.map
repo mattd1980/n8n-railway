@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../../nodes/Cisco/Webex/descriptions/index.ts"],"sourcesContent":["export * from './MessageDescription';\nexport * from './MeetingDescription';\nexport * from './MeetingTranscript';\n"],"mappings":";;;;;;;;;;;;;;;AAAA;AAAA;AAAA,iCAAc,iCAAd;AACA,iCAAc,iCADd;AAEA,iCAAc,gCAFd;","names":[]}

@@ -1,0 +1,6 @@
+export declare const QUEUE_NAME = "jobs";
+export declare const JOB_TYPE_NAME = "job";
+export declare const COMMAND_PUBSUB_CHANNEL = "n8n.commands";
+export declare const WORKER_RESPONSE_PUBSUB_CHANNEL = "n8n.worker-response";
+export declare const SELF_SEND_COMMANDS: Set<"reload-license" | "restart-event-bus" | "reload-external-secrets-providers" | "community-package-install" | "community-package-update" | "community-package-uninstall" | "get-worker-id" | "get-worker-status" | "add-webhooks-triggers-and-pollers" | "remove-triggers-and-pollers" | "display-workflow-activation" | "display-workflow-deactivation" | "display-workflow-activation-error" | "relay-execution-lifecycle-event" | "clear-test-webhooks">;
+export declare const IMMEDIATE_COMMANDS: Set<"reload-license" | "restart-event-bus" | "reload-external-secrets-providers" | "community-package-install" | "community-package-update" | "community-package-uninstall" | "get-worker-id" | "get-worker-status" | "add-webhooks-triggers-and-pollers" | "remove-triggers-and-pollers" | "display-workflow-activation" | "display-workflow-deactivation" | "display-workflow-activation-error" | "relay-execution-lifecycle-event" | "clear-test-webhooks">;

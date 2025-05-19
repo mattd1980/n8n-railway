@@ -1,0 +1,1 @@
+{"version":3,"file":"1690000000040-AddMfaColumns.js","sourceRoot":"","sources":["../../../src/migrations/sqlite/1690000000040-AddMfaColumns.ts"],"names":[],"mappings":";;;AAAA,wFAAoG;AAEpG,MAAa,0BAA2B,SAAQ,yDAAa;IAA7D;;QACC,gBAAW,GAAG,KAAc,CAAC;IAC9B,CAAC;CAAA;AAFD,gEAEC"}

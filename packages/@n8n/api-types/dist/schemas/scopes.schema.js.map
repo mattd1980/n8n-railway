@@ -1,0 +1,1 @@
+{"version":3,"file":"scopes.schema.js","sourceRoot":"","sources":["../../src/schemas/scopes.schema.ts"],"names":[],"mappings":";;;AACA,6BAAwB;AAEX,QAAA,YAAY,GAAG,OAAC;KAC3B,KAAK,CACL,OAAC;KACC,MAAM,EAAE;KACR,KAAK,CACL,uBAAuB,EACvB,oGAAoG,CACpG,CACF;KACA,GAAG,CAAC,CAAC,CAAC;KACN,SAAS,CAAC,CAAC,MAAM,EAAE,EAAE;IACrB,OAAO,MAAuB,CAAC;AAChC,CAAC,CAAC,CAAC"}

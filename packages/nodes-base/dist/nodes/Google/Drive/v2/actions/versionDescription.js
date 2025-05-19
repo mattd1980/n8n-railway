@@ -1,0 +1,126 @@
+"use strict";
+var __create = Object.create;
+var __defProp = Object.defineProperty;
+var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+var __getOwnPropNames = Object.getOwnPropertyNames;
+var __getProtoOf = Object.getPrototypeOf;
+var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __export = (target, all) => {
+  for (var name in all)
+    __defProp(target, name, { get: all[name], enumerable: true });
+};
+var __copyProps = (to, from, except, desc) => {
+  if (from && typeof from === "object" || typeof from === "function") {
+    for (let key of __getOwnPropNames(from))
+      if (!__hasOwnProp.call(to, key) && key !== except)
+        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
+  }
+  return to;
+};
+var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
+  // If the importer is in node compatibility mode or this is not an ESM
+  // file that has been converted to a CommonJS file using a Babel-
+  // compatible transform (i.e. "__esModule" has not been set), then set
+  // "default" to the CommonJS "module.exports" for node compatibility.
+  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
+  mod
+));
+var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
+var versionDescription_exports = {};
+__export(versionDescription_exports, {
+  versionDescription: () => versionDescription
+});
+module.exports = __toCommonJS(versionDescription_exports);
+var import_n8n_workflow = require("n8n-workflow");
+var drive = __toESM(require("./drive/Drive.resource"));
+var file = __toESM(require("./file/File.resource"));
+var fileFolder = __toESM(require("./fileFolder/FileFolder.resource"));
+var folder = __toESM(require("./folder/Folder.resource"));
+const versionDescription = {
+  displayName: "Google Drive",
+  name: "googleDrive",
+  icon: "file:googleDrive.svg",
+  group: ["input"],
+  version: 3,
+  subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
+  description: "Access data on Google Drive",
+  defaults: {
+    name: "Google Drive"
+  },
+  inputs: [import_n8n_workflow.NodeConnectionTypes.Main],
+  outputs: [import_n8n_workflow.NodeConnectionTypes.Main],
+  usableAsTool: true,
+  credentials: [
+    {
+      name: "googleApi",
+      required: true,
+      displayOptions: {
+        show: {
+          authentication: ["serviceAccount"]
+        }
+      }
+    },
+    {
+      name: "googleDriveOAuth2Api",
+      required: true,
+      displayOptions: {
+        show: {
+          authentication: ["oAuth2"]
+        }
+      }
+    }
+  ],
+  properties: [
+    {
+      displayName: "Authentication",
+      name: "authentication",
+      type: "options",
+      options: [
+        {
+          // eslint-disable-next-line n8n-nodes-base/node-param-display-name-miscased
+          name: "OAuth2 (recommended)",
+          value: "oAuth2"
+        },
+        {
+          name: "Service Account",
+          value: "serviceAccount"
+        }
+      ],
+      default: "oAuth2"
+    },
+    {
+      displayName: "Resource",
+      name: "resource",
+      type: "options",
+      noDataExpression: true,
+      options: [
+        {
+          name: "File",
+          value: "file"
+        },
+        {
+          name: "File/Folder",
+          value: "fileFolder"
+        },
+        {
+          name: "Folder",
+          value: "folder"
+        },
+        {
+          name: "Shared Drive",
+          value: "drive"
+        }
+      ],
+      default: "file"
+    },
+    ...drive.description,
+    ...file.description,
+    ...fileFolder.description,
+    ...folder.description
+  ]
+};
+// Annotate the CommonJS export names for ESM import in node:
+0 && (module.exports = {
+  versionDescription
+});
+//# sourceMappingURL=versionDescription.js.map

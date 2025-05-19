@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../../nodes/Aws/IAM/descriptions/index.ts"],"sourcesContent":["export * as group from './group/Group.resource';\nexport * as user from './user/User.resource';\n"],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,YAAuB;AACvB,WAAsB;","names":[]}

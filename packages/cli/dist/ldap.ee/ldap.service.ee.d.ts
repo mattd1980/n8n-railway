@@ -1,0 +1,35 @@
+import type { LdapConfig } from '@n8n/constants';
+import { SettingsRepository } from '@n8n/db';
+import type { RunningMode } from '@n8n/db';
+import type { Entry as LdapUser } from 'ldapts';
+import { Cipher, Logger } from 'n8n-core';
+import { EventService } from '../events/event.service';
+export declare class LdapService {
+    private readonly logger;
+    private readonly settingsRepository;
+    private readonly cipher;
+    private readonly eventService;
+    private client;
+    private syncTimer;
+    config: LdapConfig;
+    constructor(logger: Logger, settingsRepository: SettingsRepository, cipher: Cipher, eventService: EventService);
+    init(): Promise<void>;
+    loadConfig(): Promise<LdapConfig>;
+    updateConfig(ldapConfig: LdapConfig): Promise<void>;
+    setConfig(ldapConfig: LdapConfig): void;
+    private setGlobalLdapConfigVariables;
+    private setLdapLoginEnabled;
+    private getClient;
+    private bindAdmin;
+    searchWithAdminBinding(filter: string): Promise<LdapUser[]>;
+    validUser(dn: string, password: string): Promise<void>;
+    findAndAuthenticateLdapUser(loginId: string, password: string, loginIdAttribute: string, userFilter: string): Promise<LdapUser | undefined>;
+    testConnection(): Promise<void>;
+    private scheduleSync;
+    runSync(mode: RunningMode): Promise<void>;
+    stopSync(): void;
+    private getUsersToProcess;
+    private getUsersToCreate;
+    private getUsersToUpdate;
+    private getUsersToDisable;
+}

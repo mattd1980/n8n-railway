@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../nodes/Egoi/Interfaces.ts"],"sourcesContent":["export interface ICreateMemberBody {\n\tbase: {\n\t\temail?: string;\n\t\tfirst_name?: string;\n\t\tlast_name?: string;\n\t\tcellphone?: string;\n\t\tbirth_date?: string;\n\t\tsubscription_status?: string;\n\t};\n\textra: [];\n}\n"],"mappings":";;;;;;;;;;;;;;AAAA;AAAA;","names":[]}

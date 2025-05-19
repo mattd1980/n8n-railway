@@ -1,0 +1,33 @@
+import { GlobalConfig } from '@n8n/config';
+import type { User } from '@n8n/db';
+import { InvalidAuthTokenRepository, UserRepository } from '@n8n/db';
+import type { NextFunction, Response } from 'express';
+import { Logger } from 'n8n-core';
+import { License } from '../license';
+import type { AuthenticatedRequest } from '../requests';
+import { JwtService } from '../services/jwt.service';
+import { UrlService } from '../services/url.service';
+export declare class AuthService {
+    private readonly globalConfig;
+    private readonly logger;
+    private readonly license;
+    private readonly jwtService;
+    private readonly urlService;
+    private readonly userRepository;
+    private readonly invalidAuthTokenRepository;
+    private skipBrowserIdCheckEndpoints;
+    constructor(globalConfig: GlobalConfig, logger: Logger, license: License, jwtService: JwtService, urlService: UrlService, userRepository: UserRepository, invalidAuthTokenRepository: InvalidAuthTokenRepository);
+    authMiddleware(req: AuthenticatedRequest, res: Response, next: NextFunction): Promise<void>;
+    clearCookie(res: Response): void;
+    invalidateToken(req: AuthenticatedRequest): Promise<void>;
+    issueCookie(res: Response, user: User, browserId?: string): void;
+    issueJWT(user: User, browserId?: string): string;
+    resolveJwt(token: string, req: AuthenticatedRequest, res: Response): Promise<User>;
+    generatePasswordResetToken(user: User, expiresIn?: string): string;
+    generatePasswordResetUrl(user: User): string;
+    resolvePasswordResetToken(token: string): Promise<User | undefined>;
+    createJWTHash({ email, password }: User): string;
+    private hash;
+    get jwtRefreshTimeout(): number;
+    get jwtExpiration(): number;
+}

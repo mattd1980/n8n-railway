@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../nodes/Zammad/descriptions/index.ts"],"sourcesContent":["export * from './GroupDescription';\nexport * from './OrganizationDescription';\nexport * from './TicketDescription';\nexport * from './UserDescription';\n"],"mappings":";;;;;;;;;;;;;;;AAAA;AAAA;AAAA,iCAAc,+BAAd;AACA,iCAAc,sCADd;AAEA,iCAAc,gCAFd;AAGA,iCAAc,8BAHd;","names":[]}

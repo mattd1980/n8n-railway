@@ -1,0 +1,5 @@
+
+
+> @n8n/config@1.40.0 build /Users/mathieudrimonakos/Documents/n8n/packages/@n8n/config
+> tsc -p tsconfig.build.json
+

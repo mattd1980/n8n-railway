@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../nodes/Keap/FileInterface.ts"],"sourcesContent":["export interface IFile {\n\tfile_name?: string;\n\tfile_data?: string;\n\tcontact_id?: number;\n\tis_public?: boolean;\n\tfile_association?: string;\n}\n"],"mappings":";;;;;;;;;;;;;;AAAA;AAAA;","names":[]}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../nodes/Keap/EcommerceProductInterface.ts"],"sourcesContent":["export interface IEcommerceProduct {\n\tactive?: string;\n\tproduct_name?: string;\n\tproduct_desc?: string;\n\tproduct_price?: number;\n\tproduct_short_desc?: string;\n\tsku?: string;\n\tsubscription_only?: boolean;\n}\n"],"mappings":";;;;;;;;;;;;;;AAAA;AAAA;","names":[]}

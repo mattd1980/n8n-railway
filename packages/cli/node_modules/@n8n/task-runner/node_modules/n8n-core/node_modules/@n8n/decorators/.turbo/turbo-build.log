@@ -1,0 +1,5 @@
+
+
+> @n8n/decorators@0.5.0 build /Users/mathieudrimonakos/Documents/n8n/packages/@n8n/decorators
+> tsc -p tsconfig.build.json
+

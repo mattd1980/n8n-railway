@@ -1,0 +1,5 @@
+
+
+> @n8n/permissions@0.25.0 build /Users/mathieudrimonakos/Documents/n8n/packages/@n8n/permissions
+> tsc -p tsconfig.build.json
+

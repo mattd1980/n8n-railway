@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../../../nodes/Microsoft/Outlook/v2/descriptions/index.ts"],"sourcesContent":["export * from './rlc.description';\nexport * from './common.descriptions';\n"],"mappings":";;;;;;;;;;;;;;;AAAA;AAAA;AAAA,iCAAc,8BAAd;AACA,iCAAc,kCADd;","names":[]}

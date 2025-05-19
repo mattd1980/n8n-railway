@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../../nodes/Google/Gmail/v1/loadOptions.ts"],"sourcesContent":["import { getLabels } from '../GenericFunctions';\n\nexport { getLabels };\n"],"mappings":";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,8BAA0B;","names":[]}

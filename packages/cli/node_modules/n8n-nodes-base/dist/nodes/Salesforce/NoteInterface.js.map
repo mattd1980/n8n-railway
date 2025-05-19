@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../nodes/Salesforce/NoteInterface.ts"],"sourcesContent":["export interface INote {\n\tTitle?: string;\n\tParentId?: string;\n\tBody?: string;\n\tOwnerId?: string;\n\tIsPrivate?: boolean;\n}\n"],"mappings":";;;;;;;;;;;;;;AAAA;AAAA;","names":[]}

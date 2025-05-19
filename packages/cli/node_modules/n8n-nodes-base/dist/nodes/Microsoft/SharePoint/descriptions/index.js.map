@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../../nodes/Microsoft/SharePoint/descriptions/index.ts"],"sourcesContent":["export * as file from './file/File.resource';\nexport * as item from './item/Item.resource';\nexport * as list from './list/List.resource';\n"],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,WAAsB;AACtB,WAAsB;AACtB,WAAsB;","names":[]}

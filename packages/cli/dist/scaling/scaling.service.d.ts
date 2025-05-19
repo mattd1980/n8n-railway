@@ -1,0 +1,56 @@
+import { GlobalConfig } from '@n8n/config';
+import { ExecutionRepository } from '@n8n/db';
+import { ErrorReporter, InstanceSettings, Logger } from 'n8n-core';
+import { ActiveExecutions } from '../active-executions';
+import { EventService } from '../events/event.service';
+import { JobProcessor } from './job-processor';
+import type { Job, JobData, JobStatus, JobId } from './scaling.types';
+export declare class ScalingService {
+    private readonly logger;
+    private readonly errorReporter;
+    private readonly activeExecutions;
+    private readonly jobProcessor;
+    private readonly globalConfig;
+    private readonly executionRepository;
+    private readonly instanceSettings;
+    private readonly eventService;
+    private queue;
+    constructor(logger: Logger, errorReporter: ErrorReporter, activeExecutions: ActiveExecutions, jobProcessor: JobProcessor, globalConfig: GlobalConfig, executionRepository: ExecutionRepository, instanceSettings: InstanceSettings, eventService: EventService);
+    setupQueue(): Promise<void>;
+    setupWorker(concurrency: number): void;
+    private reportJobProcessingError;
+    stop(): Promise<void>;
+    private pauseQueue;
+    private stopMain;
+    private stopWorker;
+    pingQueue(): Promise<void>;
+    getPendingJobCounts(): Promise<{
+        active: number;
+        waiting: number;
+    }>;
+    addJob(jobData: JobData, { priority }: {
+        priority: number;
+    }): Promise<import("bull").Job<JobData>>;
+    getJob(jobId: JobId): Promise<import("bull").Job<JobData> | null>;
+    findJobsByStatus(statuses: JobStatus[]): Promise<import("bull").Job<JobData>[]>;
+    stopJob(job: Job): Promise<boolean>;
+    getRunningJobsCount(): number;
+    private registerListeners;
+    private registerWorkerListeners;
+    private registerMainOrWebhookListeners;
+    private isJobMessage;
+    private decodeWebhookResponse;
+    private assertQueue;
+    private assertWorker;
+    private readonly jobCounters;
+    private queueMetricsInterval;
+    get isQueueMetricsEnabled(): boolean;
+    private scheduleQueueMetrics;
+    private stopQueueMetrics;
+    private readonly queueRecoveryContext;
+    private scheduleQueueRecovery;
+    private stopQueueRecovery;
+    private recoverFromQueue;
+    private toErrorMsg;
+    private hasValidJobData;
+}

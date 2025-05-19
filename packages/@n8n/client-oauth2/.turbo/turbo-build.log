@@ -1,0 +1,5 @@
+
+
+> @n8n/client-oauth2@0.25.0 build /Users/mathieudrimonakos/Documents/n8n/packages/@n8n/client-oauth2
+> tsc -p tsconfig.build.json
+

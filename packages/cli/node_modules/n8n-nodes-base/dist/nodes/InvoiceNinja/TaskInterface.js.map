@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../nodes/InvoiceNinja/TaskInterface.ts"],"sourcesContent":["export interface ITask {\n\tclient_id?: number;\n\tcustom_value1?: string;\n\tcustom_value2?: string;\n\tdescription?: string;\n\tproject_id?: number;\n\ttime_log?: string;\n}\n"],"mappings":";;;;;;;;;;;;;;AAAA;AAAA;","names":[]}

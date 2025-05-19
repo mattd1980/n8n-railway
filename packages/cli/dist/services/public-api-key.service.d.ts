@@ -1,0 +1,43 @@
+import type { UpdateApiKeyRequestDto } from '@n8n/api-types';
+import type { CreateApiKeyRequestDto } from '@n8n/api-types/src/dto/api-keys/create-api-key-request.dto';
+import type { User } from '@n8n/db';
+import { ApiKey, ApiKeyRepository, UserRepository } from '@n8n/db';
+import type { GlobalRole, ApiKeyScope } from '@n8n/permissions';
+import type { EntityManager } from '@n8n/typeorm';
+import type { NextFunction, Request, Response } from 'express';
+import type { OpenAPIV3 } from 'openapi-types';
+import { EventService } from '../events/event.service';
+import type { AuthenticatedRequest } from '../requests';
+import { JwtService } from './jwt.service';
+export declare class PublicApiKeyService {
+    private readonly apiKeyRepository;
+    private readonly userRepository;
+    private readonly jwtService;
+    private readonly eventService;
+    constructor(apiKeyRepository: ApiKeyRepository, userRepository: UserRepository, jwtService: JwtService, eventService: EventService);
+    createPublicApiKeyForUser(user: User, { label, expiresAt, scopes }: CreateApiKeyRequestDto): Promise<ApiKey>;
+    getRedactedApiKeysForUser(user: User): Promise<{
+        apiKey: string;
+        expiresAt: number | null;
+        user: User;
+        userId: string;
+        label: string;
+        scopes: ApiKeyScope[];
+        id: string;
+        generateId(): void;
+        createdAt: Date;
+        updatedAt: Date;
+        setUpdateDate(): void;
+    }[]>;
+    deleteApiKeyForUser(user: User, apiKeyId: string): Promise<void>;
+    updateApiKeyForUser(user: User, apiKeyId: string, { label, scopes }: UpdateApiKeyRequestDto): Promise<void>;
+    private getUserForApiKey;
+    redactApiKey(apiKey: string): string;
+    getAuthMiddleware(version: string): (req: AuthenticatedRequest, _scopes: unknown, schema: OpenAPIV3.ApiKeySecurityScheme) => Promise<boolean>;
+    private generateApiKey;
+    private getApiKeyExpiration;
+    apiKeyHasValidScopesForRole(role: GlobalRole, apiKeyScopes: ApiKeyScope[]): boolean;
+    apiKeyHasValidScopes(apiKey: string, endpointScope: ApiKeyScope): Promise<boolean>;
+    getApiKeyScopeMiddleware(endpointScope: ApiKeyScope): (req: Request, res: Response, next: NextFunction) => Promise<void>;
+    removeOwnerOnlyScopesFromApiKeys(user: User, tx?: EntityManager): Promise<import("@n8n/typeorm").UpdateResult[]>;
+}
